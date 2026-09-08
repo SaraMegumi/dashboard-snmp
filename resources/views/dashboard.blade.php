@@ -101,8 +101,7 @@
 <body>
 
 @php
-    // Remove o prefixo de tipo (STRING:, Counter32: etc.) e formata Timeticks
-    // em algo legível, para não exibir a saída "crua" do SNMP no dashboard.
+  
     function limparValorSnmp($valor) {
         if (preg_match('/^Timeticks:\s*\((\d+)\)/', $valor, $m)) {
             $centesimos = (int) $m[1];
